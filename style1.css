@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    
+}
+#rec{
+    height: 60px;
+    background-color: #0f1111;
+    
+}
+#logo{
+    color: #f08804;
+}
+button{
+    color: yellow;
+}
+a{
+    margin: right 2rem; ;
+}
+.contentbox{
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+    display: inline-block;
+    transition: transform 0.5s ease;
+    background-image:url("images.jpg");
+    background-size: cover;       
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.contentbox1{
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+    display: inline-block;
+    transition: transform 0.5s ease;
+    background-image:url("meloni.jpg");
+    background-size: cover;       
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.contentbox:hover{
+    transform: rotate(90deg);
+    background-image: linear-gradient(rgba(0, 0, 255, 0.4), rgba(0, 0, 255, 0.4)), url("meloni2.jpg");
+
+}
+
+.contentbox1:hover{
+    transform: rotate(90deg);
+    background-image: linear-gradient(rgba(246, 8, 32, 0.4), rgba(246, 8, 32, 0.4)), url("baldwin.jpg");
+
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+#content{
+    height: 1000px;
+}
