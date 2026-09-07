@@ -6,11 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <p id = "demo"></p>
+    <p id = "demo">finding HTML Elements by ID</p>
+    <p>This example demonstrates the <b>GetElementByID</b>method.</p>
     <script>
-        const myPara = document.getElementById("demo");
-
-        myPara.innerHTML = "Hello World!"
+        const element = document.getElementById("intro");
+        document.getElementById("demo").innerHTML = "The text from the intro paragraph is: " + element.innerHTML
+        
     </script>
 </body>
 </html>
