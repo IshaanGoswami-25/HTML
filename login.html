@@ -6,10 +6,33 @@
     <title>Login Page</title>
     <center><h1>Student Login Page</h1></center>
 </head>
+<style>
+    .login-form{
+        width: 50%;
+        height: 250px;
+        background-color: white ;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .login-form input{
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    .login-form button{
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-color: blue;
+        color: white;
+    }
+</style>
 <body bgcolor="white" text="black">
 <center>
     <form>
-        <fieldset style="width: 350px;">
+        <fieldset class="login-form">
         FirstName: <input type = "text"><br><br>
         LastName: <input type = "text"><br><br>
         Department: <input type = "text"><br><br>
@@ -18,7 +41,7 @@
         <label for = "Gender">Gender:</label><br>
         Male: <input type = "radio" name = "Gender">
         Female: <input type = "radio" name="Gender"><br><br>
-        <center><button>Login</button></center>
+        <button>Login</button>
         </fieldset>
     </form>
 </center>
