@@ -12,3 +12,6 @@ if(true)
     let blockVariable = "Inside Block";
     console.log(blockVariable + " <br>");
 }
+
+const collegeName = "IIT Bhauti"
+console.log(collegeName)
