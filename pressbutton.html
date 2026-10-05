@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="pressBtn">Press and Hold</button>
+    <script>
+        const pressBtn = document.getElementById("pressBtn");
+        pressBtn.addEventListener("mousedown", function(){
+            pressBtn.innerText = "Holding Down";
+        });
+
+        pressBtn.addEventListener("mouseup", function(){
+            pressBtn.innerText = "Press and Hold";
+        })
+    </script>
+</body>
+</html>

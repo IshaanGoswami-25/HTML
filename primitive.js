@@ -14,4 +14,3 @@ console.log("isPasses Number: " + isPasses)
 
 
 const Subjects = ["FSD","Automata","Data Structures","DBMS","OOPs"];
- 

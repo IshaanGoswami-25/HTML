@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="click me" on click="f1()">
+    <div id="box" style="width: 100px; height:100px; background-color: blue;">
+    </div>
+    <script>
+        const box = document.getElementById("box");
+
+        box.addEventListener("mouseover", function ()
+    {
+        box.style.backgroundColor = "yellow";
+    });
+
+    box.addEventListener("mouseout", function (){
+        box.style.backgroundColor = "blue";
+    });
+    </script>
+</body>
+</html>
