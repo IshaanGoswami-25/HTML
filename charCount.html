@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charCounter</title>
+</head>
+<body>
+    <input type="text" id="username" placeholder="Enter Username">
+    <p id="charCount">Characters: 0</p>
+    <script>
+        const usernameInput = document.getElementById("username");
+        const countText = document.getElementById("charCount");
+
+        usernameInput.addEventListener("keyup", function (){
+            countText.innerText = "Characters: " + usernameInput.value.length;
+        });
+    </script>
+</body>
+</html>
