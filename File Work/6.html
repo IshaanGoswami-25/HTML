@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q6 - JavaScript Basics</title>
+</head>
+<body>
+    <h2>Open your browser console to see the JavaScript outputs!</h2>
+
+    <script>
+        let itemName = "Laptop"; // String
+        let price = 800;        // Number
+        let isAvailable = true; // Boolean
+        let taxRate = 0.05;     // Operator usage
+        let totalPrice = price + (price * taxRate);
+
+        let features = ["Fast Processor", "16GB RAM", "512GB SSD"];
+
+        let product = {
+            name: itemName,
+            cost: totalPrice,
+            specs: features
+        };
+
+        function displayProductInfo(prodObj) {
+            if (isAvailable) {
+                console.log("Product: " + prodObj.name);
+                console.log("Total Price with Tax: $" + prodObj.cost);
+                console.log("Features: " + prodObj.specs.join(", "));
+            } else {
+                console.log("Product is out of stock.");
+            }
+        }
+
+        displayProductInfo(product);
+    </script>
+</body>
+</html>

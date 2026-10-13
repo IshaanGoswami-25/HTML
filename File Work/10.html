@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q10 - Usability Report Tool</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f9f9f9; }
+        .report-box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 600px; margin: auto; }
+        textarea { width: 100%; height: 80px; }
+    </style>
+</head>
+<body>
+
+    <div class="report-box">
+        <h2>Website Usability Report Generator</h2>
+        <p>Analyze a website and generate a structured evaluation report.</p>
+
+        <label>Website URL / Name:</label><br>
+        <input type="text" id="siteName" value="My Portfolio Site" style="width: 100%;"><br><br>
+
+        <label>Enter Key Finding / Suggestion:</label><br>
+        <textarea id="findingInput">Navigation bar works smoothly, but contrast on mobile view can be improved.</textarea><br><br>
+
+        <button onclick="generateReport()">Generate Report</button>
+
+        <hr>
+        <h3>Output Report:</h3>
+        <div id="outputArea" style="background: #eee; padding: 15px; border-radius: 5px;"></div>
+    </div>
+
+    <script>
+        function generateReport() {
+            let site = document.getElementById("siteName").value;
+            let finding = document.getElementById("findingInput").value;
+            
+            let htmlOutput = `
+                <strong>Target Website:</strong> ${site} <br><br>
+                <strong>Evaluation Criteria Analysis:</strong>
+                <ul>
+                    <li><strong>Navigation Usability:</strong> Verified via fixed header structure.</li>
+                    <li><strong>Mobile Responsiveness:</strong> Checked media queries / layout scaling.</li>
+                    <li><strong>Accessibility & Forms:</strong> Inputs tested for labels and requirements.</li>
+                    <li><strong>Custom Observation/Suggestion:</strong> ${finding}</li>
+                </ul>
+                <em style="color: green;">Report Status: Completed successfully.</em>
+            `;
+            
+            document.getElementById("outputArea").innerHTML = htmlOutput;
+        }
+    </script>
+</body>
+</html>

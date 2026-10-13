@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q9 - Advanced JavaScript</title>
+</head>
+<body>
+    <h2>Check your browser console for Advanced JS results (Prototypes, Closures, Scope)</h2>
+
+    <script>
+        function Counter(startValue) {
+            this.count = startValue;
+        }
+
+        Counter.prototype.increment = function() {
+            this.count++;
+            console.log("Current Count (Prototype Method):", this.count);
+        };
+
+        let myCounter = new Counter(5);
+        myCounter.increment(); // Output: 6
+
+        function createBankAccount(initialBalance) {
+            let balance = initialBalance; // Private variable enclosed in scope
+
+            return {
+                deposit: function(amount) {
+                    balance += amount;
+                    console.log("Deposited: $" + amount + " | Balance: $" + balance);
+                },
+                withdraw: function(amount) {
+                    if (amount <= balance) {
+                        balance -= amount;
+                        console.log("Withdrew: $" + amount + " | Balance: $" + balance);
+                    } else {
+                        console.log("Insufficient funds!");
+                    }
+                }
+            };
+        }
+
+        let myAccount = createBankAccount(100);
+        myAccount.deposit(50);   // Balance: 150
+        myAccount.withdraw(40);  // Balance: 110
+    </script>
+</body>
+</html>

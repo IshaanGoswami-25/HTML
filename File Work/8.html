@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q8 - Form Validation & Events</title>
+    <style>
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+
+    <h2>Login Form Validation</h2>
+    <form id="loginForm">
+        <label>Email: </label><br>
+        <input type="text" id="emailInput"><br><br>
+        
+        <label>Password: </label><br>
+        <input type="password" id="passInput"><br><br>
+        
+        <button type="submit">Login</button>
+    </form>
+    <p id="feedbackMsg"></p>
+
+    <script>
+        const form = document.getElementById("loginForm");
+        
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent page refresh
+            
+            let email = document.getElementById("emailInput").value;
+            let password = document.getElementById("passInput").value;
+            let msg = document.getElementById("feedbackMsg");
+
+            if (email === "" || password === "") {
+                msg.className = "error";
+                msg.innerText = "Error: All fields must be filled out!";
+            } else if (!email.includes("@")) {
+                msg.className = "error";
+                msg.innerText = "Error: Invalid email format (missing '@').";
+            } else if (password.length < 6) {
+                msg.className = "error";
+                msg.innerText = "Error: Password must be at least 6 characters.";
+            } else {
+                msg.className = "success";
+                msg.innerText = "Success! Logged in successfully.";
+            }
+        });
+    </script>
+</body>
+</html>

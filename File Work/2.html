@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q2 - Forms & Media</title>
+    <style>
+        .error { color: red; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h2>Contact / Registration Form</h2>
+    
+    <form id="regForm" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required>
+            <span id="nameError" class="error"></span>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="age">Age (18-100):</label><br>
+            <input type="number" id="age" name="age" min="18" max="100">
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <hr>
+    <h2>Media Element (Video)</h2>
+    <video width="320" height="240" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        function validateForm() {
+            let user = document.getElementById("username").value;
+            if (user.length < 3) {
+                document.getElementById("nameError").innerText = " Name must be at least 3 characters long.";
+                return false;
+            }
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</body>
+</html>

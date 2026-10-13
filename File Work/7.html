@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q7 - DOM & Loops</title>
+</head>
+<body>
+    <h2 id="title">Dynamic List Generator</h2>
+    <input type="text" id="userInput" placeholder="Enter a word (e.g., apple)">
+    <button onclick="processInput()">Process</button>
+
+    <p id="resultText"></p>
+    <ul id="dynamicList"></ul>
+
+    <script>
+        function processInput() {
+            let inputVal = document.getElementById("userInput").value;
+            let resultParagraph = document.getElementById("resultText");
+            let listContainer = document.getElementById("dynamicList");
+            
+            listContainer.innerHTML = ""; 
+
+            if (inputVal === "") {
+                resultParagraph.innerText = "Please enter some text!";
+                return;
+            }
+
+            let upperText = inputVal.toUpperCase(); 
+            resultParagraph.innerText = "Transformed text: " + upperText + " (Length: " + inputVal.length + ")";
+
+            for (let i = 1; i <= 3; i++) {
+                let li = document.createElement("li"); 
+                li.innerText = "Item copy " + i + " of: " + inputVal;
+                listContainer.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>

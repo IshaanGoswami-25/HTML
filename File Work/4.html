@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q4 - Responsive Layout & Media Queries</title>
+    <style>
+        body { font-family: Arial; margin: 0; }
+        
+        .navbar { background: #333; overflow: hidden; }
+        .navbar a { float: left; display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none; }
+        .navbar a:hover { background: #ddd; color: black; }
+
+        .gallery { padding: 20px; text-align: center; }
+        .card {
+            display: inline-block;
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 15px; /* Rounded corners */
+        }
+        .card img { width: 100%; border-radius: 10px; }
+
+        @media screen and (max-width: 600px) {
+            .navbar a { float: none; width: 100%; }
+            .card { display: block; width: 90%; margin: 10px auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <a href="#">About</a>
+    </div>
+
+    <div class="gallery">
+        <h2>Image Gallery (Responsive)</h2>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Sample">
+            <p>Rounded Card 1</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Sample">
+            <p>Rounded Card 2</p>
+        </div>
+    </div>
+
+</body>
+</html>
