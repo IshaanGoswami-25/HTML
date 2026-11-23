@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Methods</title>
+</head>
+<body>
+    <h1>JavaScript Array Methods</h1>
+    <script>
+        var a = ["Apple", "Banana", "Cherry", "Date", "Cranberry"];
+        var b = ["Carrot", "Broccoli", "Spinach", "Potato", "Tomato"];
+        document.write(a.join(", ") + "<br>");
+        var c = ["Mango", "Pineapple", "Grapes"];
+        document.write(c.sort() + "<br>");
+        document.write(a.reverse() + "<br>");
+        document.writeln("a=" + a+"<br>");
+        document.writeln("b=" + b+"<br>");
+
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        document.writeln("days.pop()"+"<br>");
+        document.writeln("Result: " + days.pop() + "<br>");
+        document.writeln("a="+a+"<br>");
+        document.writeln(a.pop()+"<br>");
+        document.writeln("a="+a+"<br>");
+
+        document.writeln("days.push('Sunday')"+"<br>");
+        document.writeln("Result: " + days.push("Sunday") + "<br>");
+        document.writeln("days="+days+"<br>");
+
+        document.writeln("a.shift()"+"<br>");
+        document.writeln("Result: " + a.shift() + "<br>");
+        document.writeln("a="+a+"<br>");
+
+        document.writeln(a.unshift('Apple')+"<br>");
+        document.writeln("Result: " + a.unshift("Apple") + "<br>");
+        document.writeln("a="+a+"<br>");
+        document.writeln(a.concat("Apricot") + "<br>");
+        document.writeln("a="+a+"<br>");
+
+        document.writeln("a.slice(1,3)"+"<br>");
+        document.writeln("Result: " + a.slice(1,3) + "<br>");
+        document.writeln("a.splice(1,2)"+"<br>");
+        document.writeln("Result: " + a.splice(1,2) + "<br>");
+        document.writeln("a="+a+"<br>");
+
+        document.writeln("a.length" + "<br>");
+        document.writeln("Result: " + a.length + "<br>");
+    </script>
+</body>
+</html>
+
